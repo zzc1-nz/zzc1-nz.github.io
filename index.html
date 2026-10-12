@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>zzc1-nz · 个人主页</title>
+<meta name="description" content="zzc1-nz 的个人主页 —— 后端开发方向，关注 Java / Spring Boot / 分布式与 AI 应用集成。">
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-soft: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-dim: #8b949e;
+    --accent: #58a6ff;
+    --accent-soft: rgba(88, 166, 255, 0.12);
+    --radius: 12px;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f6f8fa;
+      --border: #d0d7de;
+      --text: #1f2328;
+      --text-dim: #656d76;
+      --accent: #0969da;
+      --accent-soft: rgba(9, 105, 218, 0.08);
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 20px;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 72px 0 96px; }
+
+  /* ---------- 头部 ---------- */
+  header { display: flex; align-items: center; gap: 20px; margin-bottom: 40px; }
+
+  .avatar {
+    width: 84px; height: 84px; border-radius: 50%;
+    border: 1px solid var(--border); flex-shrink: 0;
+    background: var(--bg-soft);
+  }
+
+  h1 { font-size: 28px; font-weight: 600; letter-spacing: -0.3px; }
+  .subtitle { color: var(--text-dim); font-size: 15px; margin-top: 4px; }
+
+  /* ---------- 通用区块 ---------- */
+  section { margin-bottom: 44px; }
+
+  h2 {
+    font-size: 15px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.6px; color: var(--text-dim);
+    padding-bottom: 10px; margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  p { margin-bottom: 14px; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ---------- 标签 ---------- */
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .tag {
+    font-size: 13px; padding: 4px 12px;
+    background: var(--accent-soft); color: var(--accent);
+    border-radius: 999px; white-space: nowrap;
+  }
+
+  /* ---------- 项目卡片 ---------- */
+  .card {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    transition: border-color .2s, transform .2s;
+  }
+
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+  .card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+  .card h3 a { color: var(--text); }
+  .card h3 a:hover { color: var(--accent); text-decoration: none; }
+
+  .card .desc { color: var(--text-dim); font-size: 14px; margin-bottom: 14px; }
+
+  .card ul { list-style: none; font-size: 14px; color: var(--text-dim); margin-bottom: 16px; }
+  .card ul li { padding-left: 16px; position: relative; margin-bottom: 5px; }
+  .card ul li::before {
+    content: "▸"; position: absolute; left: 0; color: var(--accent);
+  }
+
+  /* ---------- 链接列表 ---------- */
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+  .link {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 14px; padding: 8px 16px;
+    background: var(--bg-soft); border: 1px solid var(--border);
+    border-radius: 8px; color: var(--text);
+    transition: border-color .2s, color .2s;
+  }
+
+  .link:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+  footer {
+    margin-top: 64px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim); font-size: 13px;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width: 560px) {
+    .wrap { padding: 48px 0 64px; }
+    header { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .avatar { width: 68px; height: 68px; }
+    h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img class="avatar" src="https://github.com/zzc1-nz.png" alt="zzc1-nz 的头像">
+    <div>
+      <h1>zzc1-nz</h1>
+      <!-- 想改一行简介就改这里 -->
+      <div class="subtitle">Java 后端开发 · 分布式系统 · AI 应用集成</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>关于我</h2>
+    <p>
+      计算机相关专业学生，主要方向是 <strong>Java 后端开发</strong>。
+      熟悉 Spring Boot 生态，做过基于消息队列的异步系统、
+      带缓存与分布式锁的服务设计，也做过大模型 API 的工程化集成。
+    </p>
+    <p>
+      喜欢把项目做得"能跑起来、能测出来、能部署出去"——
+      写测试、配监控、写清楚 README，而不是只交一份代码。
+    </p>
+  </section>
+
+  <section>
+    <h2>技术栈</h2>
+    <div class="tags">
+      <span class="tag">Java 17</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Spring Security</span>
+      <span class="tag">Spring Data JPA</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">Redis</span>
+      <span class="tag">RabbitMQ</span>
+      <span class="tag">JWT</span>
+      <span class="tag">Vue 3</span>
+      <span class="tag">Element Plus</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Prometheus / Grafana</span>
+      <span class="tag">Maven</span>
+      <span class="tag">Git</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>项目</h2>
+
+    <div class="card">
+      <h3><a href="https://github.com/zzc1-nz/ai-pub" target="_blank" rel="noopener">AI-Pub 智能公众号管理系统</a></h3>
+      <div class="desc">
+        面向公众号运营者的智能客服中台：微信消息经「关键词规则 → 大模型生成 → 兜底话术」
+        三级决策后自动回复，并提供公众号配置、菜单同步、素材管理、消息检索与数据统计。
+      </div>
+      <ul>
+        <li>四层算法：N-gram 分词 → TF-IDF + 余弦相似度意图识别 → 词典情感分析 → 多因子融合决策</li>
+        <li>消息可靠性：RabbitMQ 手动 ACK + 死信队列 + msgId 幂等去重</li>
+        <li>access_token 三层缓存：Redis 缓存 + 分布式锁防击穿 + TTL 提前异步续期</li>
+        <li>敏感字段 AES-256-GCM 加密入库；JWT 无状态认证 + 角色鉴权</li>
+        <li>95 个测试用例（单元 + 集成），Docker Compose 一键部署，Prometheus + Grafana 监控</li>
+      </ul>
+      <div class="links">
+        <a class="link" href="https://github.com/zzc1-nz/ai-pub" target="_blank" rel="noopener">查看源码</a>
+        <span class="link">Spring Boot 3.2 · Spring AI · Vue 3</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>联系</h2>
+    <div class="links">
+      <a class="link" href="https://github.com/zzc1-nz" target="_blank" rel="noopener">GitHub</a>
+      <a class="link" href="mailto:2465746307@qq.com">邮箱</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year">2026</span> zzc1-nz · Hosted on GitHub Pages
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
